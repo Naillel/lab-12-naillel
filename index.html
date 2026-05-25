@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebComponents</title>
+  <script type="module" src="main.js"></script>
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0d1117;
+      padding: 2rem;
+    }
+
+    user-dashboard {
+      width: 100%;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+
+  <user-dashboard>
+    <user-card
+      slot="user-card"
+      name="Alonso"
+      role="Profesor"
+      avatar="🧑‍🏫">
+    </user-card>
+
+    <weather-time slot="weather"></weather-time>
+
+    <warning-badge slot="warning" pulsing>
+      Sesión por expirar
+    </warning-badge>
+  </user-dashboard>
+
+</body>
+</html>
